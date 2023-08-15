@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnLoadURL;
-    WebView webView;
+    WebView wvMyPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +19,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnLoadURL = findViewById(R.id.loadButton);
-        webView = findViewById(R.id.viewWebPage);
+        wvMyPage = findViewById(R.id.viewWebPage);
 
-        webView.setWebViewClient(new WebViewClient());
+        wvMyPage.setWebViewClient(new WebViewClient());
 
 
         btnLoadURL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String url = "https://www.rp.edu.sg/soi/home";
-                webView.loadUrl(url);
+                wvMyPage.loadUrl(url);
             }
         });
 
